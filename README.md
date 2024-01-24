@@ -3,4 +3,4 @@
 
 "Hello, World"
 
-<a href="https://github.com/MateusSKV9/HTML-CSS-Curso-Em-Video/tree/main/modulo-02/desafios/d010">Site Android</a>
+<a href="https://mateusskv9.github.io/HTML-CSS-Curso-Em-Video/modulo-02/desafios/d010/android">Executar Site Android</a>
