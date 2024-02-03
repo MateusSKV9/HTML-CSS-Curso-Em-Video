@@ -6,22 +6,21 @@
     <title>Posicionamento</title>
     <style>
         body {
-            height: 100vh;
             margin: 0;
             background-color: black;
-            border: 2px dashed white;
             box-sizing: border-box;
             background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
             background-size: 100px;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: left top;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
         }
 
         h1 {
             color: white;
             text-align: center;
-            margin: 58vh auto;
+            margin: 20px auto;
             border: 1px solid white;
             width: 30%;
             border-radius: 10px;
@@ -37,9 +36,35 @@
             transform: rotate(360deg);
             box-shadow: 1px 1px 50px rgb(255, 255, 255);
         }
+
+/* Define a animação chamada 'degradeAnimacao' */
+@keyframes degradeAnimacao {
+  0% {
+    background-position: 10% 50%; /* Início do degradê no lado esquerdo */
+    margin: left;
+  }
+  100% {
+    background-position: 100% 50%; /* Fim do degradê no lado direito */
+    margin: right;
+  }
+}
+
+/* Aplica a animação ao botão com um degradê */
+button {
+  background: linear-gradient(to right, #3498db, #e74c3c); /* Cores do degradê */
+  background-size: 200% 100%; /* Ajusta o tamanho do degradê para cobrir a largura do botão */
+  animation: degradeAnimacao 3s infinite; /* Nome da animação, duração, e repetição infinita */
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
     </style>
 </head>
 <body>
     <h1>Posicionamento</h1>
+    <button>Button</button>
 </body>
 </html>
