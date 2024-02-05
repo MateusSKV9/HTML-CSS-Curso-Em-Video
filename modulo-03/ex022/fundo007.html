@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: relative;
+
+            background-color: red;
+            padding: 10px;
+            height: 600px;
+        }
+
+        #conteudo {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: rgb(0, 0, 255);
+            height: 200px;
+            width: 400px;
+            margin: 5px;
+        }
+
+        #container2 {
+            background-color: rgb(0, 0, 0);
+            max-width: 80%;
+            height: 600px;
+            padding: 5px;
+            margin: auto;
+
+            position: relative;
+        }
+
+        #conteudo2 {
+            background: white url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
+            width: 80%;
+            height: 500px;
+            padding: 5px;
+            margin: auto;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 100px;
+            margin: 2px;
+            height: 100px;
+        }
+
+        img:hover {
+            box-shadow: 5px 5px 10px red;
+            transition-duration: 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo"></article>
+    </section>
+    <hr>
+    <section id="container2">
+        <article id="conteudo2">
+            <img src="imagens/pattern001.png" alt="">
+            <img src="imagens/pattern002.png" alt="">
+            <img src="imagens/pattern003.png" alt="">
+            <img src="imagens/pattern004.png" alt="">
+        </article>
+    </section>
+</body>
+</html>
