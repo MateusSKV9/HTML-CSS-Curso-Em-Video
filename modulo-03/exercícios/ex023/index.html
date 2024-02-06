@@ -4,8 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+    <link rel="shortcut icon" href="favicone.ico" type="image/x-icon">
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 400px;
+            border-collapse: collapse;
+            border: 3px solid red;
+        }
+
+        td {
+            border: 1px solid rgb(255, 255, 255);
+            padding: 10px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        td:hover {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+            transform: rotate(360deg);
+            transition-duration: 1s;
+        }
+
+        .linhapar {
+            background-color: lightgray;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Minha primeira tabela</h1>
+    <table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td class="linhapar">A2</td>
+            <td class="linhapar">B2</td>
+            <td class="linhapar">C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td class="linhapar">A4</td>
+            <td class="linhapar">B4</td>
+            <td class="linhapar">C4</td>
+        </tr>
+    </table>
 </body>
 </html>
