@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mais um tabela</title>
+    <style>
+        html, body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        th {
+            background-color: gray;
+            color: white;
+        }
+
+        .cnome {
+            background-color: lightcoral;
+        }
+        
+        .cgroup {
+            background-color: lightgreen;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Exercício de tabela</h1>
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="cgroup" span="2">
+            <col class="cprof">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mateus Santos</td>
+                <td>M</td>
+                <td>19</td>
+                <td>Programador</td>
+            </tr>
+            <tr>
+                <td>Luna</td>
+                <td>F</td>
+                <td>19</td>
+                <td>Programadora</td>
+            </tr>
+            <tr>
+                <td>Elisa</td>
+                <td>F</td>
+                <td>20</td>
+                <td>Médica</td>
+            </tr>
+            <tr>
+                <td>Robson</td>
+                <td>M</td>
+                <td>28</td>
+                <td>Fisioterapeuta</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>F</td>
+                <td>18</td>
+                <td>Professora</td>
+            </tr>
+            <tr>
+                <td>Paulo</td>
+                <td>M</td>
+                <td>125</td>
+                <td>Engenheiro</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
