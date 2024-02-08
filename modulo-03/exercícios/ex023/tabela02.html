@@ -5,30 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela 02</title>
     <style>
-        table {
-            width: 500px;
+        main {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .table-container {
+            display: flex;
+        }
+        
+        .table-container table {
+            flex: 1;
+        }
+
+        table#one {
             height: 600px;
+            width: 300px;
             border-collapse: collapse;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+            position: relative;
         }
 
-        caption {
+        #one caption {
             font-size: 1.3em;
             background-color: lightgray;
+            top: 0;
         }
 
-        td {
+        #one td {
             border: 1px solid black;
             text-align: center;
             vertical-align: middle;
+            width: 20%;
         }
 
-        thead, tfoot {
+       #one thead  tr th {
+            position: sticky;
+            top: 0;
+            background-color: rgb(47, 46, 46);
+        }
+
+        #one thead, tfoot {
             background-color: rgb(47, 46, 46);
             text-align: center;
             color: white;
             border: 1px solid black;
+        } 
+
+        th {
+            padding: 5px;
+        }
+
+        #one tbody tr:nth-child(2n) {
+            background-color: lightgray;
+
+            /* odd = ímpar; even = par */
+        }
+
+        table:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            vertical-align: middle;
+            border-collapse: collapse;
+            border: 5px solid darkblue;
+        }
+
+        #two tr:nth-child(even) {
+            background-color: gray;
+        }
+
+        #two td {
+            border: 1px solid blue;
+            width: 25%;
+        }
+
+        #two th {
+            background-color: aqua;
+            color: black;
+            font-weight: bold;
+            border: 5px solid darkblue;
         }
     </style>
 </head>
@@ -44,119 +100,280 @@
             TFOOT
                 TR > TD, TH
     -->
-    <table>
-        <caption>Letras do alfabeto</caption>
-        <thead>
-            <tr>
-                <th scope="col">Cabeçalho da tabela</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-                <td>D</td>
-                <td>E</td>
-            </tr>
-            <tr>
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-                <td>D</td>
-                <td>E</td>
-            </tr>
-            <tr>
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-                <td>D</td>
-                <td>E</td>
-            </tr>
-        </tbody>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tfoot>
-            <tr>
-                <th scope="row">Footer da tabela</th>
-                <td>Letras</td>
-            </tr>
-        </tfoot>
-    </table>
+    <main>
+        <table id="one">
+            <caption>Letras do alfabeto</caption>
+            <thead>
+                <tr>
+                    <th scope="col" colspan="5">Cabeçalho da tabela</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+        
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                    <th scope="row" colspan="4">Footer da tabela</th>
+                    <td colspan="1">Letras</td>
+            </tfoot>
+        </table>
+        <table id="two">
+            <caption>Caption</caption>
+            <thead>
+                <th colspan="4">Cabeçalho da tabela 2</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+            <tfoot>
+               <th colspan="4">Footer da tabela</th>
+            </tfoot>
+        </table>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <td>Conteúdo 1</td>
+                    <td>Conteúdo 2</td>
+                    <td>Conteúdo 3</td>
+                    <td>Conteúdo 4</td>
+                </tr>
+            </table>
+        </div>
+        
+    </main>
 </body>
 </html>
