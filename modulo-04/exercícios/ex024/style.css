@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+html, body {
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+p {
+    text-align: justify;
+    text-indent: 5%;
+}
+
