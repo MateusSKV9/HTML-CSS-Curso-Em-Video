@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: lightgray;
+        }
+
+        img {
+            min-width: 320px;
+            max-width: 100px;
+            margin-top: 10px;
+        }
+
+        fieldset {
+            margin: 5px;
+            padding: 5px;
+            width: 200px;
+            border: 0;
+        }
+
+        fieldset p {
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input.dados {
+            display: block;
+            margin: 5px;
+            align-items: center;
+            color: white;
+            background-color: black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        input.dados:hover {
+            background-color: red;
+            color: white;
+            transition-duration: 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://www.google.com.br/search" method="get" target="_blank">
+        <img src="https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_960_720.png" alt="google"><br>
+        <fieldset>
+            <label for="ipesquisa">Pesquisar no Google:</label>
+            <input type="text" name="q" id="ipesquisa">
+            <input type="submit" value="Buscar">
+        </fieldset>
+        <fieldset>
+            <p>
+                <label for="iusu">Usuário: </label>
+                <input type="text" name="usu" id="iusu" minlength="5" maxlength="10" placeholder="Digite" autocomplete="username" required>
+            </p>
+            <p>
+                <label for="isen">Senha: </label>
+                <input type="password" name="sen" id="isen" placeholder="Digite" required>
+            </p>
+            <p>
+                <input class="dados" type="submit" value="Enviar">
+                <input class="dados" type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
