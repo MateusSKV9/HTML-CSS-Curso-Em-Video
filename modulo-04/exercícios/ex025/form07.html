@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        select {
+            width: 150px;
+        }
+        
+        select:hover {
+            border: 2px solid red;
+        }
+        textarea {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado: </label>
+            <select name="est" id="iest">
+                <option value="" selected>--- Selecione ---</option>
+                <optgroup label="Nordeste">
+                    <option value="BA">Bahia</option>
+                </optgroup>
+                <optgroup label="Sudeste">
+                    <option value="BH">Belo Horizonte</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="listprof" list="listprof" autocomplete="">
+            <datalist id="listprof">
+                <option>--- Selecione ---</option>
+                <option>Programador</option>
+                <option>Médico</option>
+                <option>Dentista</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="ime">Mensagem: </label>
+            <textarea name="me" id="ime" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
