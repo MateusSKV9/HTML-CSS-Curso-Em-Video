@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+menu {
+    background-color: darkgray;
+}
+
+header ul {
+    display: flex;
+    font-weight: bold;
+}
+
+header li {
+    margin: 10px;
+    list-style: none;
+    background-color: black;
+    padding: 5px;
+}
+
+main {
+    width: 500px;
+    margin: auto;
+    background-color: antiquewhite;
+    padding: 20px
+}
+
+main h2 {
+    text-align: center;
+}
+
+main p {
+    text-indent: 5%;
+    text-align: justify;
+}
+
