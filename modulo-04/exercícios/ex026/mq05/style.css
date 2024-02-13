@@ -61,9 +61,10 @@ menu a:hover {
     background-color: cadetblue;
 }
 
+/*------------ MAIN ------------*/
+
 main {
     background-color: rgb(255, 255, 255);
-    width: 80vw;
     padding: 10px;
     margin: 10px;
     margin: auto;
