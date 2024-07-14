@@ -27,7 +27,7 @@ Esse curso abordou as seguintes tecnologias:
 
 
 ## 💻 Projetos
-Até o momento, desenvolvi os quatro seguintes projetos propostos:
+Até o momento, desenvolvi os seguintes projetos propostos:
 - <a href="https://mateusskv9.github.io/projeto-android/">Projeto Android</a>
 - <a href="https://mateusskv9.github.io/projeto-cordel/">Projeto Cordel</a>
 - <a href="https://mateusskv9.github.io/projeto-redes-social/">Projeto Redes Sociais</a>
